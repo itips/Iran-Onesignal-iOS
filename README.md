@@ -19,10 +19,10 @@ platform :ios, '10.0'
 target 'projectName' do
   use_frameworks!
 
-    pod 'Iran-OneSignal'
+    pod 'Iran-Onesignal-iOS'
 
    target 'OneSignalNotificationServiceExtension' do
-       pod 'Iran-OneSignal'
+       pod 'Iran-Onesignal-iOS'
    end
 end
 
