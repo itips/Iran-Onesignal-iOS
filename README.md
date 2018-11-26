@@ -1,4 +1,4 @@
-# Iran-Onesignal-iOS
+# Onesignal iOS for Iran
 Avoid OneSignal Sanctions for Iran.
 <p align="center">
   <img src="https://onesignal.com/assets/common/logo_onesignal_color.png"/>
