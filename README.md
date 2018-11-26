@@ -11,7 +11,7 @@ Avoid OneSignal Sanctions for Iran.
 <p align="right">جهت استفاده فقط کافیست تمام مراحلی که در داکیومنت هست رو بروید و در زمان وارد کردن لایبری به صورت زیر عمل کنید و فقط به جای لایبری وانسیگنال لایبری ایران-وانسیگنال رو استفاده کنید و تمام امکانات این سرویس بدون هیچ اختلالی قابل استفاده هست و با زمان تحریم نشده هیچ تفاوتی نخواهد کرد</p>
 
 ```
-source 'https://github.com/SalarDastan/Iran-OneSignal-specs.git'
+source 'https://github.com/itips/Iran-Onesignal-iOS.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '10.0'
