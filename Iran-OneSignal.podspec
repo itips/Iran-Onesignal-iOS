@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "Hossein Dastan" => "s.hossein.dastan@gmail.com" }
 
-  s.source       = { :git => "https://github.com/SalarDastan/Iran-Onesignal.git", :branch => "master", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/itips/Iran-Onesignal-iOS.git", :branch => "master", :tag => s.version.to_s }
 
   s.platform     = :ios
   s.requires_arc = true
