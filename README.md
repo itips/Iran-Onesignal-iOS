@@ -27,7 +27,9 @@ target 'projectName' do
 end
 
 ```
+
 <p align="right">و بعد از تغییر در فایل</p>
+
 ```
 pod install
 ```
