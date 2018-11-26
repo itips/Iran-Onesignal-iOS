@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name         = "Iran-OneSignal"
+  s.name         = "Iran-Onesignal-iOS"
   s.version      = "2.9.2"
   s.summary      = "OneSignal push notification library for Iranian mobile apps."
   s.homepage     = "http://falsedev.com"
