@@ -42,7 +42,7 @@ pod install
 ---
 
 <p dir=rtl align="center">
-  با تشکر از <a href="https://github.com/SalarDastan">SalarDastan</a>
+  توسعه یافته توسط <a href="https://github.com/SalarDastan">SalarDastan</a>
 </p>
 
 
