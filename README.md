@@ -34,7 +34,45 @@ end
 pod install
 ```
 
+<p align="right">در صورت مشکل با کوکوپـادس کامند زیر را وارد نمایید</p>
 
+```
+pod repo update
+```
+
+<p align="right">همه متدها و طریقه استفاده دقیقا مانند خود لایبری وانسیگنال میباشد و کوچکترین تفاوتی ندارد</p>
+
+```
+import OneSignal
+
+
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false]
+        
+        // Replace 'YOUR_APP_ID' with your OneSignal App ID.
+        OneSignal.initWithLaunchOptions(launchOptions,
+                                        appId: "YOUR_APP_ID",
+                                        handleNotificationAction: nil,
+                                        settings: onesignalInitSettings)
+        
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification;
+        
+        // Recommend moving the below line to prompt for push after informing the user about
+        //   how your app will use them.
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+        })
+        
+        return true
+    }
+}
+```
 
 <br>
 

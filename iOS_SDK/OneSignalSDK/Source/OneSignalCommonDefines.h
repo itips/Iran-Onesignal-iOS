@@ -52,12 +52,17 @@
 #define PERMISSION_ACCEPTED @"ONESIGNAL_ACCEPTED_NOTIFICATION_LAST"
 #define PERMISSION_PROVISIONAL_STATUS @"ONESIGNAL_PROVISIONAL_AUTHORIZATION_LAST"
 #define PERMISSION_PROVIDES_NOTIFICATION_SETTINGS @"OS_APP_PROVIDES_NOTIFICATION_SETTINGS"
+#define EXTERNAL_USER_ID @"OS_EXTERNAL_USER_ID"
 
 // To avoid undefined symbol compiler errors on older versions of Xcode,
 // instead of using UNAuthorizationOptionProvisional directly, we will use
 // it indirectly with these macros
 #define PROVISIONAL_UNAUTHORIZATIONOPTION (UNAuthorizationOptions)(1 << 6)
 #define PROVIDES_SETTINGS_UNAUTHORIZATIONOPTION (UNAuthorizationOptions)(1 << 5)
+
+// These options are defined in all versions of iOS that we support, so we
+// can use them directly.
+#define DEFAULT_UNAUTHORIZATIONOPTIONS (UNAuthorizationOptionSound + UNAuthorizationOptionBadge + UNAuthorizationOptionAlert)
 
 // iOS Parameter Names
 #define IOS_USES_PROVISIONAL_AUTHORIZATION @"uses_provisional_auth"
@@ -110,23 +115,23 @@ typedef enum {GET, POST, HEAD, PUT, DELETE, OPTIONS, CONNECT, TRACE} HTTPMethod;
 #define APNS_TIMEOUT 25.0
 
 #ifndef OS_TEST
-// OneSignal API Client Defines
-#define REATTEMPT_DELAY 30.0
-#define REQUEST_TIMEOUT_REQUEST 120.0 //for most HTTP requests
-#define REQUEST_TIMEOUT_RESOURCE 120.0 //for loading a resource like an image
-#define MAX_ATTEMPT_COUNT 3
+    // OneSignal API Client Defines
+    #define REATTEMPT_DELAY 30.0
+    #define REQUEST_TIMEOUT_REQUEST 120.0 //for most HTTP requests
+    #define REQUEST_TIMEOUT_RESOURCE 120.0 //for loading a resource like an image
+    #define MAX_ATTEMPT_COUNT 3
 
-// Send tags batch delay
-#define SEND_TAGS_DELAY 5.0
+    // Send tags batch delay
+    #define SEND_TAGS_DELAY 5.0
 #else
-// Test defines for API Client
-#define REATTEMPT_DELAY 0.004
-#define REQUEST_TIMEOUT_REQUEST 0.02 //for most HTTP requests
-#define REQUEST_TIMEOUT_RESOURCE 0.02 //for loading a resource like an image
-#define MAX_ATTEMPT_COUNT 3
+    // Test defines for API Client
+    #define REATTEMPT_DELAY 0.004
+    #define REQUEST_TIMEOUT_REQUEST 0.02 //for most HTTP requests
+    #define REQUEST_TIMEOUT_RESOURCE 0.02 //for loading a resource like an image
+    #define MAX_ATTEMPT_COUNT 3
 
-// Send tags batch delay
-#define SEND_TAGS_DELAY 0.005
+    // Send tags batch delay
+    #define SEND_TAGS_DELAY 0.005
 #endif
 
 // A max timeout for a request, which might include multiple reattempts
